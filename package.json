@@ -10,7 +10,7 @@
   "main": "insitu.underscore.js",
   "version": "0.1",
   "dependencies": {
-    "underscore": ">=1.8.3",
+    "underscore": ">=1.8.3"
   },
   "license": "MIT",
   "files": [
