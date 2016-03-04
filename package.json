@@ -8,7 +8,7 @@
     "url": "git://github.com/InSitu-Software/insitu.underscore.js"
   },
   "main": "insitu.underscore.js",
-  "version": "0.1",
+  "version": "0.1.1",
   "dependencies": {
     "underscore": ">=1.8.3"
   },
