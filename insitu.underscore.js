@@ -82,6 +82,8 @@ _.mixin({
             array = input.models;
         } else if (_.isArray(input)) {
             array = input;
+        } else if (_.isArguments(input)) {
+            array = _.toArray(input);
         } else {
             array =[input];
         }
