@@ -41,8 +41,8 @@ _.mixin({
 
 
   	mapWithKey: function(object, f, context) {
-  		return _.pluralize(object).reduce(function(memo, value) {
-  			var result = f.call(context, value);
+  		return _.pluralize(object).reduce(function(memo, value, key) {
+  			var result = f.call(context, value, key);
   			memo[result[0]] = result[1];
   			return memo;
   		}, {});
