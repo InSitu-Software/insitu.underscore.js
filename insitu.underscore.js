@@ -89,6 +89,15 @@ _.mixin({
         }
         return _(array);
     },
+	
+    templateById: function(id){
+        var tpl = document.getElementById("tpl-profile2-userdata");
+        if( _.isUndefined( tpl ) ){
+            console.log("Template not found");
+	    return false;
+        }
+        return _.template( tpl.innerHTML );
+    },
 
 
 
