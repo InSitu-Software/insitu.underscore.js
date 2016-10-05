@@ -91,7 +91,7 @@ _.mixin({
     },
 	
     templateById: function(id){
-        var tpl = document.getElementById("tpl-profile2-userdata");
+        var tpl = document.getElementById(id);
         if( _.isUndefined( tpl ) ){
             console.log("Template not found");
 	    return false;
