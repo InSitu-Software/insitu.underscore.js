@@ -89,7 +89,7 @@ _.mixin({
         }
         return _(array);
     },
-	
+
     templateById: function(id){
         var tpl = document.getElementById(id);
         if( _.isUndefined( tpl ) ){
@@ -97,6 +97,20 @@ _.mixin({
 	    return false;
         }
         return _.template( tpl.innerHTML );
+    },
+
+    groupBySubsequent: function(values, f, context) {
+    	var _last_value = null;
+    	var _current_key = null;
+		return _.groupBy(values, function(current_value) {
+			if (!_current_key) {
+				_current_key = current_value;
+			} else if (!f.call(context, _last_value, current_value)) {
+				_current_key = current_value;
+			}
+			_last_value = current_value;
+			return _current_key;
+		});
     },
 
 
