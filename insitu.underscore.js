@@ -93,7 +93,7 @@ _.mixin({
     templateById: function(id){
         var tpl = document.getElementById(id);
         if( _.isUndefined( tpl ) || _.isNull( tpl ) ){
-            console.log("Template not found");
+            console.log("Template not found: "+id);
 	    return false;
         }
         return _.template( tpl.innerHTML );
